@@ -30,4 +30,12 @@ public class RegionService {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
     }
+
+    public Region save(Region region) {
+        return regionRepository.save(region);
+    }
+
+    public void deleteById(Long id) {
+        regionRepository.deleteById(id);
+    }
 }
