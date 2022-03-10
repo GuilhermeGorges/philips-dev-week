@@ -16,11 +16,11 @@ public class RegionService {
 
     private final RegionRepository regionRepository;
 
-    public List<Region> listAll() {
+    public List<Region> listAllRegion() {
         return regionRepository.findAll();
     }
 
-    public ResponseEntity<Region> findById(Long id) {
+    public ResponseEntity<Region> findRegionById(Long id) {
         Optional<Region> regionOptional = regionRepository.findById(id);
 
         if(regionOptional.isPresent()) {
@@ -31,11 +31,11 @@ public class RegionService {
 
     }
 
-    public Region save(Region region) {
+    public Region saveRegion(Region region) {
         return regionRepository.save(region);
     }
 
-    public void deleteById(Long id) {
+    public void deleteRegionById(Long id) {
         regionRepository.deleteById(id);
     }
 }

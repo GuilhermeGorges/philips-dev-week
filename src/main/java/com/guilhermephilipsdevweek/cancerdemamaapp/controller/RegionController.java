@@ -19,22 +19,22 @@ public class RegionController {
 
     @GetMapping
     public List<Region> getAllRegion(){
-        return regionService.listAll();
+        return regionService.listAllRegion();
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Region> getRegionById(@PathVariable Long id){
-        return regionService.findById(id);
+        return regionService.findRegionById(id);
     }
 
     @PostMapping
     public Region saveRegion(@RequestBody Region region){
-        return  regionService.save(region);
+        return  regionService.saveRegion(region);
     }
 
     @DeleteMapping("/{id}")
     public void deleteRegion(@PathVariable Long id){
-        regionService.deleteById(id);
+        regionService.deleteRegionById(id);
     }
 
 }
