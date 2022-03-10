@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Incidence {
+public class Occurrence {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
