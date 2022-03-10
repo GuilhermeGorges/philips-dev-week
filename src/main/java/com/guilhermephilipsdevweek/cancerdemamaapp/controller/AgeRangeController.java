@@ -1,6 +1,7 @@
 package com.guilhermephilipsdevweek.cancerdemamaapp.controller;
 
 import com.guilhermephilipsdevweek.cancerdemamaapp.entity.AgeRange;
+import com.guilhermephilipsdevweek.cancerdemamaapp.entity.Region;
 import com.guilhermephilipsdevweek.cancerdemamaapp.service.AgeRangeService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,11 @@ public class AgeRangeController {
     @GetMapping
     public ResponseEntity<List<AgeRange>> listAllAgeRange(){
         return ageRangeService.listAllAgeRange();
+    }
+
+    @GetMapping("{/id}")
+    public ResponseEntity<AgeRange> getAgeRangeById(@PathVariable Long id){
+        return ageRangeService.getAgeRangeById(id);
     }
 
     @PostMapping
