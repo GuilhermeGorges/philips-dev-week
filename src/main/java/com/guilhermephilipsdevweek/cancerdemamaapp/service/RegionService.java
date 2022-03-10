@@ -1,5 +1,6 @@
 package com.guilhermephilipsdevweek.cancerdemamaapp.service;
 
+import com.guilhermephilipsdevweek.cancerdemamaapp.entity.AgeRange;
 import com.guilhermephilipsdevweek.cancerdemamaapp.entity.Region;
 import com.guilhermephilipsdevweek.cancerdemamaapp.repository.RegionRepository;
 import lombok.AllArgsConstructor;
@@ -16,16 +17,28 @@ public class RegionService {
 
     private final RegionRepository regionRepository;
 
-    public List<Region> listAllRegion() {
-        return regionRepository.findAll();
+    public ResponseEntity<List<Region>> listAllRegion() {
+        try {
+            List<Region> regionList = regionRepository.findAll();
+            return new ResponseEntity<>(regionList, HttpStatus.OK);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     public ResponseEntity<Region> findRegionById(Long id) {
+        try{
+
         Optional<Region> regionOptional = regionRepository.findById(id);
 
         if(regionOptional.isPresent()) {
             Region region = regionOptional.get();
             return new ResponseEntity<>(region, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } catch (Exception e){
+            e.printStackTrace();
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 

@@ -44,11 +44,11 @@ public class AgeRangeService {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    public AgeRange save(AgeRange ageRange) {
+    public AgeRange saveAgeRange(AgeRange ageRange) {
         return ageRangeRepository.save(ageRange);
     }
 
-    public void deleteById(Long id) {
+    public void deleteAgeRangeById(Long id) {
         ageRangeRepository.getById(id);
     }
 }

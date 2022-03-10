@@ -30,12 +30,12 @@ public class AgeRangeController {
 
     @PostMapping
     public AgeRange saveAgeRange(@RequestBody AgeRange ageRange){
-        return  ageRangeService.save(ageRange);
+        return  ageRangeService.saveAgeRange(ageRange);
     }
 
     @DeleteMapping("/{id}")
     public void deleteAgeRange(@PathVariable Long id){
-        ageRangeService.deleteById(id);
+        ageRangeService.deleteAgeRangeById(id);
     }
 
 
