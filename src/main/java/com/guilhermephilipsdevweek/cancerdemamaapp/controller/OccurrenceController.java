@@ -4,6 +4,7 @@ import com.guilhermephilipsdevweek.cancerdemamaapp.entity.Occurrence;
 import com.guilhermephilipsdevweek.cancerdemamaapp.service.OccurrenceService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -28,11 +29,13 @@ public class OccurrenceController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public Occurrence saveOccurrence(@RequestBody Occurrence occurrence){
         return  occurrenceService.saveOccurrence(occurrence);
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
     public void deleteOccurrence(@PathVariable Long id){
         occurrenceService.deleteOccurrenceById(id);
     }
