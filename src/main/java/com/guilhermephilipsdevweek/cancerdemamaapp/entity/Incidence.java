@@ -12,14 +12,14 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Regiao {
+public class Incidence {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = false)
+    @Column(nullable = false, updatable = false)
     private Long id;
-    private String regiao;
-    private Long qnt_exames;
-
-
+    private Integer Regiao_id;
+    private Integer Mes;
+    private Long Faixa_id;
+    private Integer Qnt_exames;
 }

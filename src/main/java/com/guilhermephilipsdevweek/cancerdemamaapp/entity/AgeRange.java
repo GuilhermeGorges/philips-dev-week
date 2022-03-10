@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class FaixaEtaria {
+public class AgeRange {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
