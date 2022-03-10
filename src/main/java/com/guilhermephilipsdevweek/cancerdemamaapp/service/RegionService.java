@@ -3,6 +3,8 @@ package com.guilhermephilipsdevweek.cancerdemamaapp.service;
 import com.guilhermephilipsdevweek.cancerdemamaapp.entity.Region;
 import com.guilhermephilipsdevweek.cancerdemamaapp.repository.RegionRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,7 +20,14 @@ public class RegionService {
         return regionRepository.findAll();
     }
 
-    public Optional<Region> findById(Long id) {
-        return regionRepository.findById(id);
+    public ResponseEntity<Region> findById(Long id) {
+        Optional<Region> regionOptional = regionRepository.findById(id);
+
+        if(regionOptional.isPresent()) {
+            Region region = regionOptional.get();
+            return new ResponseEntity<>(region, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
     }
 }
