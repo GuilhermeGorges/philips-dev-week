@@ -1,10 +1,10 @@
-
-CREATE USER 'java'@localhost IDENTIFIED BY 'Passw123!@';
-GRANT ALL PRIVILEGES ON *.* TO 'java'@localhost;
+CREATE USER 'finley'@'localhost' IDENTIFIED BY 'Passw123!@';
+GRANT ALL PRIVILEGES ON *.* TO 'finley'@'localhost'
+    ->     WITH GRANT OPTION;
 
 CREATE DATABASE dbcancerdemama;
 SHOW DATABASES;
-USE dbcancerdemama();
+USE dbcancerdemama;
 
 CREATE TABLE regiao (id INT auto_increment PRIMARY KEY, regiao varchar(20), total_exames int );
 CREATE TABLE faixa_etaria (id INT auto_increment PRIMARY KEY, Faixa_i int, Faixa_n int, Descricao varchar (50));

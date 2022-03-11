@@ -23,7 +23,7 @@ public class OccurrenceController {
         return occurrenceService.listAllOccurrence();
     }
 
-    @GetMapping("{/id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Occurrence> getOccurrenceById(@PathVariable Long id){
         return occurrenceService.getOccurrenceById(id);
     }

@@ -4,6 +4,7 @@ import com.guilhermephilipsdevweek.cancerdemamaapp.entity.AgeRange;
 import com.guilhermephilipsdevweek.cancerdemamaapp.entity.Region;
 import com.guilhermephilipsdevweek.cancerdemamaapp.repository.RegionRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -12,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-@AllArgsConstructor
+@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class RegionService {
 
     private final RegionRepository regionRepository;

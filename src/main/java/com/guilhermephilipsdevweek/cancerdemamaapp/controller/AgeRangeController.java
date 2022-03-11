@@ -24,7 +24,7 @@ public class AgeRangeController {
         return ageRangeService.listAllAgeRange();
     }
 
-    @GetMapping("{/id}")
+    @GetMapping("/{id}")
     public ResponseEntity<AgeRange> getAgeRangeById(@PathVariable Long id){
         return ageRangeService.getAgeRangeById(id);
     }

@@ -1,6 +1,5 @@
 package com.guilhermephilipsdevweek.cancerdemamaapp.service;
 
-import com.guilhermephilipsdevweek.cancerdemamaapp.entity.AgeRange;
 import com.guilhermephilipsdevweek.cancerdemamaapp.entity.Occurrence;
 import com.guilhermephilipsdevweek.cancerdemamaapp.repository.OccurrenceRepository;
 import lombok.AllArgsConstructor;
