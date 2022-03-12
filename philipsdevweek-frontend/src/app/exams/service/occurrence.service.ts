@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Occurrence } from '../model/occurrence';
 
 @Injectable({
@@ -6,12 +8,12 @@ import { Occurrence } from '../model/occurrence';
 })
 export class OccurrenceService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+    ) { }
 
-
-  listOccurrences(): Occurrence[]{
-    return [
-      {id: 0, regiao_id: 1, mes: 2, faixa_id: 2, qnt_exames: 1}
-    ];
+  listOccurrences(): Observable<Occurrence[]>{
+    const url = '/assets/occurrences.json';
+    return this.http.get<Occurrence[]>(url);
   }
 }

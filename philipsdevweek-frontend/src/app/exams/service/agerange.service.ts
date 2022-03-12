@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Agerange } from '../model/agerange';
 
 @Injectable({
@@ -6,11 +8,12 @@ import { Agerange } from '../model/agerange';
 })
 export class AgerangeService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+    ) { }
 
-  listAgeRange(): Agerange[]{
-    return [
-      {id: 0, faixa_i: 1, faixa_n: 2, descricao: "Norte"}
-    ];
+    listAgeRange(): Observable<Agerange[]>{
+    const url = '/assets/occurrences.json';
+    return this.http.get<Agerange[]>(url);
   }
 }
