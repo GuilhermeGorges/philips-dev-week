@@ -3,11 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'', pathMatch:'full', redirectTo:'occurrence'
+    path:'', pathMatch:'full', redirectTo:'exam'
   },
   {
-    path: 'occurrence', 
-    loadChildren: () => import('./exams/exams.module').then(m => m.OccurrenceModule) 
+    path: 'exam', 
+    loadChildren: () => import('./exams/exams.module').then(m => m.ExamModule) 
   }
 ];
 

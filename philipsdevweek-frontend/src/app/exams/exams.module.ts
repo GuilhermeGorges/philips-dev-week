@@ -18,4 +18,4 @@ import { ExamsComponent } from './exams/exams.component';
     ExamsRoutingModule
   ]
 })
-export class OccurrenceModule { }
+export class ExamModule { }

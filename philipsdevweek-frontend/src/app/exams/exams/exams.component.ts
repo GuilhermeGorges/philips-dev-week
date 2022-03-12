@@ -18,16 +18,14 @@ export class ExamsComponent implements OnInit {
   agerange: Agerange[] = [];
 
   constructor(
-    private regionService:RegionService,
-    private occurrenceService:OccurrenceService,
-    private ageRangeService:AgerangeService
+    private regionService: RegionService,
+    private occurrenceService: OccurrenceService,
+    private ageRangeService: AgerangeService
     ) { }
 
   ngOnInit(): void {
     this.exam_occurrence = this.occurrenceService.listOccurrences();
     this.regions = this.regionService.listRegions();
-    this.agerange = this.ageRangeService.listAges();
-
+    this.agerange = this.ageRangeService.listAgeRange();
   }
-
 }

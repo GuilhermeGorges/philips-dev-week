@@ -8,7 +8,7 @@ export class AgerangeService {
 
   constructor() { }
 
-  listAges(): Agerange[]{
+  listAgeRange(): Agerange[]{
     return [
       {id: 0, faixa_i: 1, faixa_n: 2, descricao: "Norte"}
     ];
