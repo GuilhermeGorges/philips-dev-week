@@ -18,8 +18,8 @@ public class Occurrence {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false, updatable = false)
     private Long id;
-    private Integer Regiao_id;
-    private Integer Mes;
-    private Long Faixa_id;
-    private Integer Qnt_exames;
+    private Integer regiao_id;
+    private Integer mes;
+    private Long faixa_id;
+    private Integer qnt_exames;
 }
