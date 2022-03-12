@@ -1,4 +1,4 @@
-export interface Ocurrence {
+export interface Occurrence {
     id: Number,
     regiao_id: Number,
     mes: Number,

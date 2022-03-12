@@ -3,19 +3,19 @@ import { CommonModule } from '@angular/common';
 import {MatSortModule} from '@angular/material/sort';
 import {MatCardModule} from '@angular/material/card';
 
-import { OccurrenceRoutingModule } from './exams-routing.module';
-import { OccurrenceComponent } from './occurrence/occurrence.component';
+import { ExamsRoutingModule } from './exams-routing.module';
+import { ExamsComponent } from './exams/exams.component';
 
 
 @NgModule({
   declarations: [
-    OccurrenceComponent
+    ExamsComponent
   ],
   imports: [
     CommonModule,
     MatSortModule,
     MatCardModule,
-    OccurrenceRoutingModule
+    ExamsRoutingModule
   ]
 })
 export class OccurrenceModule { }

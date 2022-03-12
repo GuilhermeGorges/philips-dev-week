@@ -10,7 +10,7 @@ export class RegionService {
 
   listRegions(): Region[]{
     return [
-      {id: 0, regiao: 'Sul', total_exames: 5000}
+      {id: 0, regiao: 'Sul', qnt_exames: 5000}
     ];
   }
 }
