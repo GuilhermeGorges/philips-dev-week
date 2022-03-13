@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/region")
+@RequestMapping("/api/region")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class RegionController {
 

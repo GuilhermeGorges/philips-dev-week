@@ -13,7 +13,7 @@ export class AgerangeService {
     ) { }
 
     listAgeRange(): Observable<Agerange[]>{
-    const url = '/assets/occurrences.json';
+    const url = '/api/age-range';
     return this.http.get<Agerange[]>(url);
   }
 }

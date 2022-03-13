@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/occurrence")
+@RequestMapping("/api/occurrence")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class OccurrenceController {
 

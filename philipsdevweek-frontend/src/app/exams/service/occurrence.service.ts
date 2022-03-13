@@ -13,7 +13,7 @@ export class OccurrenceService {
     ) { }
 
   listOccurrences(): Observable<Occurrence[]>{
-    const url = '/assets/occurrences.json';
+    const url = '/api/occurrence';
     return this.http.get<Occurrence[]>(url);
   }
 }

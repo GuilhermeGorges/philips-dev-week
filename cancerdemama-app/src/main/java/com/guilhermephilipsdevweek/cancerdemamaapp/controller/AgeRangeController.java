@@ -1,7 +1,6 @@
 package com.guilhermephilipsdevweek.cancerdemamaapp.controller;
 
 import com.guilhermephilipsdevweek.cancerdemamaapp.entity.AgeRange;
-import com.guilhermephilipsdevweek.cancerdemamaapp.entity.Region;
 import com.guilhermephilipsdevweek.cancerdemamaapp.service.AgeRangeService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/age-range")
+@RequestMapping("/api/age-range")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class AgeRangeController {
 
